@@ -6,11 +6,13 @@ on:
       - main
 
 env:
-  HEALTHCHECK_URL: http://34.228.255.233:5000
+  # HEALTHCHECK_URL: http://34.228.255.233:5000
+  HEALTHCHECK_URL: localhost:5000
 
 jobs:
   Build-test-deploy:
-    runs-on: self-hosted
+    # runs-on: self-hosted
+    runs-on: ubunts-latest
 
     steps:
       - name: Checkout Code
